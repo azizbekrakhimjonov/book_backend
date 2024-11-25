@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Download Site</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            color: #555;
+        }
+        .book-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        .book {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            padding: 15px;
+            text-align: center;
+        }
+        .book img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+        .book h2 {
+            font-size: 18px;
+            margin: 10px 0;
+            color: #333;
+        }
+        .book p {
+            font-size: 14px;
+            color: #777;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Books</h1>
+    <div class="book-container">
+        {% for i in book %}
+        <div class="book">
+            <img src="{{ i.image }}" alt="{{ i.title }}">
+            <h2>{{ i.title }}</h2>
+            <p>Author: {{ i.author }}</p>
+            <p>Category: {{ i.category }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
