@@ -11,6 +11,3 @@ class Book(models.Model):
         return self.title
 
 
-git remote add origin https://github.com/azizbekrakhimjonov/book_backend.git
-git branch -M main
-git push -u origin main
